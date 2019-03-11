@@ -8,37 +8,17 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/README.md">
-          <value>
-            <set />
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/build.gradle">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/gradle.properties">
+        <entry key="$PROJECT_DIR$/hello-world/build.gradle">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/macosMain/kotlin/com/dumbledank/konan/tensorflow/HelloWorld.kt">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/macosMain/kotlin/com/dumbledank/konan/tensorflow/hello/HelloWorld.kt">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/macosMain/kotlin/sample/SampleMacos.kt">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/nativeInterop/cinterop/tensorflow.def">
+        <entry key="$PROJECT_DIR$/settings.gradle">
           <value>
             <set />
           </value>

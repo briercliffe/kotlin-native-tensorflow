@@ -1,0 +1,38 @@
+apply plugin: "kotlin-multiplatform"
+
+kotlin {
+    macosX64("macos") {
+        compilations.main {
+            // Comment to generate Kotlin/Native library (KLIB) instead of executable file:
+            outputKinds("executable")
+            // Change to specify fully qualified name of your application's entry point:
+            entryPoint 'com.dumbledank.konan.tensorflow.hello.main'
+            cinterops {
+                tensorflow {
+                    defFile "$rootDir/src/nativeInterop/cinterop/tensorflow.def"
+                    includeDirs '/usr/local/include'
+                }
+            }
+        }
+    }
+    sourceSets {
+        macosMain {
+            kotlin.srcDirs += "src/main"
+        }
+        macosTest {
+            kotlin.srcDirs += "src/test"
+        }
+    }
+}
+
+task runProgram {
+    def buildType = 'RELEASE' // Change to 'DEBUG' to run application with debug symbols.
+    dependsOn kotlin.targets.macos.compilations.main.linkTaskName('EXECUTABLE', buildType)
+    doLast {
+        def programFile = kotlin.targets.macos.compilations.main.getBinary('EXECUTABLE', buildType)
+        exec {
+            executable programFile
+            args ''
+        }
+    }
+}
