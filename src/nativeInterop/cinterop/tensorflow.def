@@ -1,0 +1,4 @@
+headers = tensorflow/c/c_api.h
+
+linkerOpts.osx = -L/usr/local/lib -ltensorflow
+
